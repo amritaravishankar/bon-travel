@@ -8,9 +8,9 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
     const [elRefs, setElRefs] = useState([]);
 
     useEffect(() => {
-        console.log("Places: ", places)
-        setElRefs((refs) => Array(places?.length).fill().map((_, i) => refs[i] || createRef()));
+        setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
       }, [places]);
+
     return (
         <div className = {classes.container}>
             <div className = {classes.text} >
@@ -44,11 +44,11 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
             </FormControl>
             <Grid container spacing={3} className = {classes.list}>
                 {places?.map((place, i) => (
-                    <Grid item key={i} xs={12}>
+                    <Grid ref={elRefs[i]} item key={i} xs={12}>
                         <PlaceDetails 
                         place={place}
                         selected={Number(childClicked) === i}
-                        refProp = {elRefs[i]}
+                        refProp={elRefs[i]}
                         />
                     </Grid>
                 ))} 
