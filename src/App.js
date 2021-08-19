@@ -14,7 +14,7 @@ const App = () => {
     const [bounds, setBounds] = useState([]);
 
     const [type, setType] = useState('restaurants');
-    const [rating, setRating] = useState('');
+    const [rating, setRating] = useState('0');
     const [filteredPlaces, setFilteredPlaces] = useState([]);
 
     const [isLoading, setIsLoading] = useState(false)
@@ -57,10 +57,11 @@ const App = () => {
         <>
             <CssBaseline />
             <Header onPlaceChanged={onPlaceChanged} onLoad={onLoad} />
+            <hr style={{color:'white', border:'none', backgroundColor:'white', height:'0.1px'}}></hr>
             <Grid container spacing={3} style={{width: '100%'}}>
                 <Grid item xs={12} md={4}>
                     <List 
-                    places={filteredPlaces.length ? filteredPlaces : places}
+                    places={filteredPlaces?.length ? filteredPlaces : places}
                     childClicked = {childClicked} 
                     isLoading = {isLoading}
                     type = {type}
@@ -74,7 +75,7 @@ const App = () => {
                     setCoordinates={setCoordinates} 
                     setBounds={setBounds} 
                     coordinates={coordinates}
-                    places={filteredPlaces.length ? filteredPlaces : places}
+                    places={filteredPlaces?.length ? filteredPlaces : places}
                     setChildClicked={setChildClicked}/>
                 </Grid>
             </Grid>

@@ -8,13 +8,16 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
     const [elRefs, setElRefs] = useState([]);
 
     useEffect(() => {
+        console.log("Places: ", places)
         setElRefs((refs) => Array(places?.length).fill().map((_, i) => refs[i] || createRef()));
       }, [places]);
     return (
         <div className = {classes.container}>
-            <Typography variant="h4">
-                Restaurants, hotels and Attractions around you...
-            </Typography>
+            <div className = {classes.text} >
+                <Typography variant="h5">
+                    Restaurants, Hotels and Attractions...
+                </Typography>
+            </div>
             { isLoading ? (
                 <div className = {classes.Loading}>
                     <CircularProgress size="5rem" />
@@ -22,20 +25,21 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
             ) : (
                 <>
             <FormControl className = {classes.formControl}>
-                <InputLabel> Type </InputLabel>
-                <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <MenuItem value="restaurants"> Restaurants </MenuItem> 
-                    <MenuItem value="hotels"> Hotels </MenuItem> 
-                    <MenuItem value="attractions"> Attractions </MenuItem> 
+                <InputLabel style={{color:'white'}}> Avenue Type </InputLabel>
+                <Select value={type} onChange={(e) => setType(e.target.value)} style={{color:'white'}}>
+                    <MenuItem className={classes.optionText} value="restaurants"> Restaurants </MenuItem> 
+                    <MenuItem className={classes.optionText} value="hotels"> Hotels </MenuItem> 
+                    <MenuItem className={classes.optionText} value="attractions"> Attractions </MenuItem> 
                 </Select>
             </FormControl>
+            &nbsp; &nbsp; &nbsp;
             <FormControl className = {classes.formControl}>
-                <InputLabel> Type </InputLabel>
-                <Select value={rating} onChange={(e) => setRating(e.target.value)}>
-                    <MenuItem value={0}> All </MenuItem> 
-                    <MenuItem value={3}> Above 3.0 </MenuItem> 
-                    <MenuItem value={4}> Above 4.0 </MenuItem> 
-                    <MenuItem value={4.5}> Above 4.5 </MenuItem> 
+                <InputLabel style={{color:'white'}}> Rating </InputLabel>
+                <Select value={rating} onChange={(e) => setRating(e.target.value)} style={{color:'white'}}>
+                    <MenuItem className={classes.optionText} value={0}> All </MenuItem> 
+                    <MenuItem className={classes.optionText} value={3}> Above 3.0 </MenuItem> 
+                    <MenuItem className={classes.optionText} value={4}> Above 4.0 </MenuItem> 
+                    <MenuItem className={classes.optionText} value={4.5}> Above 4.5 </MenuItem> 
                 </Select>
             </FormControl>
             <Grid container spacing={3} className = {classes.list}>
