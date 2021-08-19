@@ -4,7 +4,7 @@ A web application developed using ReactJS to serve as a travel companion for use
 
 The web application makes use of the Google Maps API and Rapid API's Travel Advisor API.
 
-Deployed using AWS Amplify.
+Deployed using **AWS Amplify.**
 
 To test the web application, visit: https://master.d11ga1chx6xy0e.amplifyapp.com. Make sure you use a Google Chrome browser to get the best graphics of the application
 
