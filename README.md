@@ -11,7 +11,7 @@ To test the web application, visit: https://master.d11ga1chx6xy0e.amplifyapp.com
 Note: Due to the basic pack limitation of RapidAPI, the application may not return data once the free quota for the month is complete. 
 
 ## UI
-<img src="" width="400">
+<img src="https://github.com/amritaravishankar/bon-travel/blob/master/UI.png" width="400">
 
 ## To run
 
