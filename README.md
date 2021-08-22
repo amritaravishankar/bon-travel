@@ -1,4 +1,4 @@
-# BonTravel 
+# 🌆 BonTravel 
 
 A web application developed using ReactJS to serve as a travel companion for users to view restaurants, hotels and attractions near them or at a desired location.
 
