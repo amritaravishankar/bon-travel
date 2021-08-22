@@ -10,12 +10,10 @@ To test the web application, visit: https://master.d11ga1chx6xy0e.amplifyapp.com
 
 Note: Due to the basic pack limitation of RapidAPI, the application may not return data once the free quota for the month is complete. 
 
+## UI
+<img src="" width="400">
 
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## To run
 
 In the project directory, you can run:
 
@@ -23,6 +21,3 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
